@@ -1,13 +1,30 @@
 my_list = []
 
 
-def prompt():
-	print my_list
-	choice = raw_input ("What would you like to do? Type 1 to add item, type 2 to remove, type 3 to quit.")
-	if choice == "1":
-		add_item()
-	elif choice == "2":
-		remove_item()
+# def prompt():
+# 	print my_list
+	# choice = raw_input ("What would you like to do? Type 1 to add item, type 2 to remove, type 3 to quit.")
+	# if choice == "1":
+	# 	add_item()
+	# elif choice == "2":
+	# 	remove_item()
+
+def menu():
+	while(True):
+		print "Main Menu"
+		print "1 - Show current list."
+		print "2 - Add an item to your shopping list."
+		print "3 - Remove item from shopping list."
+		choice = raw_input ("Type your selection:")
+		if choice == "1":
+			show_list()
+		elif choice == "2":
+			add_item()
+		elif choice == "3":
+			remove_item()
+		else: 
+			return
+
 
 
 
